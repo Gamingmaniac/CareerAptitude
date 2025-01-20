@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Career Aptitude</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/start-quiz.css"> <!-- Specific CSS for Quiz -->
+</head>
+<body>
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="backdrop" onclick="toggleSidebar()"></div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <button class="hamburger" onclick="toggleSidebar()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assests/images/logo.png" alt="Career Aptitude">
+                    </a>
+                </div>
+                <h1 class="site-title">Career Aptitude</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="quizcontainer">
+            <form id="rulesForm" class="rules-form" action="quiz.html" method="GET"> 
+                <h1 class="quiz">Take the Quiz</h1>
+                <h2>Guidelines for the Career Aptitude Test</h2>
+                <ul>
+                    <li>Welcome to the Career Aptitude Test! Before you begin, please review the following important guidelines to ensure a smooth and meaningful experience:</li>
+                    <li>
+                        <strong>1. Purpose of the Test:</strong>
+                        <ul>
+                            <li>The questions are thoughtfully designed to assess your interests and preferences.</li>
+                            <li>Your responses will help identify the field best suited to you: Arts, Science, or Commerce.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>2. Structure of the Test:</strong>
+                    </li>
+                    <li>The test consists of 15 multiple choice questions.</li>
+                    <li>Each question carries 1 point, contributing to your overall result.</li>
+                    <li>
+                        <strong>3. Result Presentation:</strong>
+                        <ul>
+                            <li>Upon completing the test, your results will be displayed in a graph format.</li>
+                            <li>The graph will clearly indicate the field where your interests align, with the highest column representing your strongest preference.</li>
+                            <li>Our AI-powered recommendation system will provide tailored insights based on your responses.</li>
+                            <li>Take your time, answer honestly, and let this test guide you toward a career path that matches your unique interests and strengths.</li>
+                            <li>So, “let's find your calling and shape your destiny, with AI!”</li>
+                            <li>Best of luck!!!</li>
+                        </ul>
+                    </li>
+                </ul>
+                <button type="submit">Proceed</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Career Education. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="assests/javascript/sidebar.js"></script>
+</body>
+</html>

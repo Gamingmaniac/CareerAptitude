@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Career Aptitude</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/faqs.css"> <!-- Specific CSS for FAQs -->
+</head>
+<body>
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="backdrop" onclick="toggleSidebar()"></div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <button class="hamburger" onclick="toggleSidebar()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assests/images/logo.png" alt="Career Aptitude">
+                    </a>
+                </div>
+                <h1 class="site-title">Career Aptitude</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="faqscontainer">
+            <h1 class="faqs">Frequently Asked Questions</h1>
+            <p>Here are some common questions and answers about our services.</p>
+
+            <h2>General Questions</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">What is Career Aptitude?</h3>
+                <p class="faq-answer">Career Aptitude is a platform designed to help individuals of 9th or 10th grade discover their ideal career paths based on their skills, interests, and knowledge.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Who can benefit from Career Aptitude?</h3>
+                <p class="faq-answer">9th or 10th graders looking to explore career options.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How does the assessment work?</h3>
+                <p class="faq-answer">Our assessment consists of a series of questions designed to evaluate your skills, interests, and values. Based on your responses, we provide personalized career recommendations.</p>
+            </div>
+    
+            <h2>Account and Registration</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">Do I need to create an account to use the services?</h3>
+                <p class="faq-answer">Yes, creating an account allows you to save your progress, access personalized recommendations, and receive updates.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How do I reset my password?</h3>
+                <p class="faq-answer">You can reset your password by clicking on the "Forgot Password?" link on the login page and following the instructions.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Can I delete my account?</h3>
+                <p class="faq-answer">Yes, you can delete your account by going to your profile settings and selecting the option to delete your account.</p>
+            </div>
+    
+            <h2>Quiz and Assessments</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">How long does the quiz take?</h3>
+                <p class="faq-answer">The quiz typically takes about 25-30 minutes to complete, depending on your pace.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Is the quiz free?</h3>
+                <p class="faq-answer">Yes, our career assessment is free.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">How accurate are the results?</h3>
+                <p class="faq-answer">While our assessments are designed to provide valuable insights, they are based on self-reported data. We recommend using the results as a guide rather than a definitive answer.</p>
+            </div>
+    
+            <h2>Support and Contact</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">How can I contact customer support?</h3>
+                <p class="faq-answer">You can reach our customer support team through the Contact page or by emailing support@careeraptitude.com.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">What should I do if I encounter technical issues?</h3>
+                <p class="faq-answer">If you experience any technical issues, please contact our support team with details about the problem, and we will assist you as soon as possible.</p>
+            </div>
+    
+            <h2>Privacy and Security</h2>
+            <div class="faq-item">
+                <h3 class="faq-question">Is my personal information safe?</h3>
+                <p class="faq-answer">Yes, we take your privacy seriously. We use industry-standard security measures to protect your personal information.</p>
+            </div>
+            <div class="faq-item">
+                <h3 class="faq-question">Do you share my data with third parties?</h3>
+                <p class="faq-answer">No, we do not share your personal data with third parties without your consent. Please refer to our Privacy Policy for more details.</p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Career Education. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/19/09/20250119093855-Y06XOYNF.js"></script>
+    <script src="assests/javascript/faqs.js"></script>
+    <script src="assests/javascript/sidebar.js"></script>
+</body>
+</html>

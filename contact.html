@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Career Aptitude</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/contact.css"> <!-- Specific CSS for Contact Us -->
+</head>
+<body>
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="backdrop" onclick="toggleSidebar()"></div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <button class="hamburger" onclick="toggleSidebar()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assests/images/logo.png" alt="Career Aptitude">
+                    </a>
+                </div>
+                <h1 class="site-title">Career Aptitude</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="contactcontainer">
+            <h1 class="contact">Contact Us</h1>
+            <p class="ask">If you have any questions, feel free to reach out to us!</p>
+            <form>
+                <input type="text" placeholder="Your Name" required class="name">
+                <input type="email" placeholder="Your Email" required class="email">
+                <textarea placeholder="Your Message" required class="message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Career Education. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/19/09/20250119093855-Y06XOYNF.js"></script>
+    <script src="assests/javascript/sidebar.js"></script>
+</body>
+</html>

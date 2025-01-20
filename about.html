@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Career Aptitude</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/about.css"> <!-- Specific CSS for About Us -->
+</head>
+<body>
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+            <<li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="backdrop" onclick="toggleSidebar()"></div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <button class="hamburger" onclick="toggleSidebar()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assests/images/logo.png" alt="Career Aptitude">
+                    </a>
+                </div>
+                <h1 class="site-title">Career Aptitude</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="aboutcontainer">
+            <h1 class="about">About Us</h1>
+            <br><h2>Welcome to Career Aptitude!</h2>
+            <h3>"Explore, Evaluate, Excel.”</h3>
+            <br><p>We are dedicated to helping individuals discover their ideal career paths through personalized quizzes and expert guidance.</p>
+            <br><p>About career guidance after class 10th.
+            It is not easy to decide on the career option that will determine the rest of each student’s life
+            especially when they are in class 10. It does not help them as even parents are left confused
+            about the right advice to offer. The confusion a student faces is varied and huge in nature.
+            They will be doubtful about which group they opt to choose and even which degree to
+            pursue after their completion of schooling and whether it must be done regularly or in
+            correspondence.</p>
+            <br><p>What help do Career Aptitude tests provide?
+            So,Our websites provide students with personalised questions which primarily aim to help
+            students understand their interests and preferences using AI recommendation.It acts as a
+            source of guidance to the students which gives them confidence in order to choose the right
+            career after their completion of board examinations. There won’t be any necessity to panic or
+            become anxious even if they have scored less marks in it.It is not recommended to make
+            unplanned, hasty decisions due to parental/peer pressure. It is significant to pursue a field
+            that a student is usually passionate about.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Career Education. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/19/09/20250119093855-Y06XOYNF.js"></script>
+    <script src="assests/javascript/sidebar.js"></script>
+</body>
+</html>

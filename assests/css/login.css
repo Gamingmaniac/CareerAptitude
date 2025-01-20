@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Rockwell', serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+    color: #333;
+    background-color: #333;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    padding-top: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    height: 100px;
+    transition: top 0.3s ease-in-out;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* Allow header-left to take available space */
+}
+
+.header-left .logo {
+    margin: 0 15px;
+}
+
+.header-left .logo img {
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        width: 80px;
+    }
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* Pushes the Sign Up button to the right */
+}
+
+.header-right input {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.navbar {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Center the navigation items */
+    gap: 15px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #333;
+}
+
+.header-right .login-btn {
+    background: #333;
+    /* Blue background for login button */
+    color: #fff;
+    /* White text */
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    /* Blue border */
+    border-radius: 4px;
+    margin-right: 10px;
+    /* Space between login and sign-up buttons */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header-right .login-btn:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+.header-right .signup-btn {
+    background: #28a745;
+    /* Green background for sign-up button */
+    color: #fff;
+    /* White text */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header-right .signup-btn:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+}
+
+.hidden {
+    top: -100px;
+}
+
+/* Login Page Specific Styles */
+main {
+    flex: 1; /* Allow main to grow and take available space */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    padding: 40px;
+    background: #333;
+    text-align: center;
+    margin-top: 100px; /* Adjust margin as needed */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.login {
+    margin-bottom: 5px;
+}
+
+.wrapper {
+    max-width: 100%;
+    box-sizing: border-box;
+    width: 400px; /* Adjusted width */
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    backdrop-filter: blur(8px);
+    text-align: center;
+    background: #fff; /* Ensure the background is white for the form */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+form input {
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-field {
+    position: relative;
+    border-bottom: 2px solid #333;
+    margin: 15px 0;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: #333;
+    pointer-events: none;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.15s ease;
+}
+
+.input-field input {
+    width: 100%;
+    color: #333;
+    border: none;
+    outline: none;
+    background: transparent;
+    height: 40px;
+    font-size: 16px;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+    font-size: 0.8rem;
+    top: 10px;
+    transform: translateY(-120%);
+}
+
+.forget {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 35px 0;
+    color: #333;
+}
+
+#remember {
+    accent-color: #333;
+}
+
+.remember-me {
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 10px; /* Space between checkbox and text */
+    vertical-align: center; /* Align checkbox vertically */
+}
+
+.forget label {
+    display: flex;
+    align-items: center;
+}
+
+.forget label p {
+    margin-left: 8px;
+}
+
+.wrapper a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.login-btn {
+    background: #333;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.register {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+/* Change color for forgot password and sign up links */
+.forget a,
+.register a {
+    color: #e8491d; /* Set the text color to orange */
+    text-decoration: underline; /* Optional: underline the text */
+}
+
+.forget a:hover,
+.register a:hover {
+    color: #d7371d; /* Change color on hover for better visibility */
+}
+
+/* Footer */
+footer {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Start hidden off-screen */
+    width: 250px; /* Width of the sidebar */
+    height: 100%; /* Full height */
+    background-color: #121212; /* Background color */
+    transition: left 0.3s ease; /* Smooth transition */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #454d55;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    color: #f0f0f0;
+}
+
+.logout-btn {
+    margin-top: auto;
+    padding: 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logout-btn:hover {
+    background-color: red;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: #fff; /* Set the hamburger lines to white */
+}
+
+.hamburger:hover {
+    background-color: transparent; /* Keep hover effect */
+}

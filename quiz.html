@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Career Aptitude</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/quiz.css"> <!-- Specific CSS for Quiz -->
+</head>
+<body>
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="backdrop" onclick="toggleSidebar()"></div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <button class="hamburger" onclick="toggleSidebar()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assests/images/logo.png" alt="Career Aptitude">
+                    </a>
+                </div>
+                <h1 class="site-title">Career Aptitude</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="quizcontainer">
+            <h1 class="quiz">Quiz</h1>
+            <B><p class="subhead">Find your perfect career match by answering our Quiz questions!</p></B>
+            <form id="quizForm" action="results.html" method="GET">
+                <div class="questions">
+                    <div class="question">
+                        <B><p>1.  Which type of assignment do you enjoy the most?</p></B>
+                        <label><input type="radio" name="preference1" value="Science"> Conducting a scientific experiment or analysis</label>
+                        <label><input type="radio" name="preference1" value="Arts"> Writing a poem, essay, or creating a poster</label>
+                        <label><input type="radio" name="preference1" value="Commerce"> Preparing a business plan or a financial report</label>
+                    </div>
+                    <div class="question">
+                        <B><p>2. What kind of problems do you enjoy solving?</p></B>
+                        <label><input type="radio" name="preference2" value="Science"> Logical or technical problems</label>
+                        <label><input type="radio" name="preference2" value="Arts"> Creative challenges like designing or storytelling</label>
+                        <label><input type="radio" name="preference2" value="Commerce"> Practical problems related to money and resources</label>
+                    </div>
+                    <div class="question">
+                        <B><p>3. Which of these magazines or sections in a newspaper attracts you the most?</p></B>
+                        <label><input type="radio" name="preference3" value="Science"> Science and technology</label>
+                        <label><input type="radio" name="preference3" value="Arts"> Arts and entertainment</label>
+                        <label><input type="radio" name="preference3" value="Commerce"> Business and economy</label>
+                    </div>
+                    <div class="question">
+                        <B><p>4. What do you prefer doing during group activities?</p></B>
+                        <label><input type="radio" name="preference4" value="Science"> Researching and organizing facts</label>
+                        <label><input type="radio" name="preference4" value="Arts"> Adding a creative touch to the project</label>
+                        <label><input type="radio" name="preference4" value="Commerce"> Planning the budget or overseeing the progress</label>
+                    </div>
+                    <div class="question">
+                        <B><p>5. If you had to make a presentation, which style would you choose?</p></B>
+                        <label><input type="radio" name="preference5" value="Science"> Present data and charts backed by logical reasoning</label>
+                        <label><input type="radio" name="preference5" value="Arts"> Use images, colors, and designs to make it attractive</label>
+                        <label><input type="radio" name="preference5" value="Commerce"> Use statistics and financial projections</label>
+                    </div>
+                    <div class="question">
+                        <B><p>6. Which career sounds the most exciting to you?</p></B>
+                        <label><input type="radio" name="preference6" value="Science"> Doctor, engineer, or scientist</label>
+                        <label><input type="radio" name="preference6" value="Arts"> Filmmaker, designer, or journalist</label>
+                        <label><input type="radio" name="preference6" value="Commerce"> Business owner, financial analyst, or accountant</label>
+                    </div>
+                    <div class="question">
+                        <B><p>7. What kind of books do you enjoy reading?</p></B>
+                        <label><input type="radio" name="preference7" value="Science"> Scientific journals or books about discoveries</label>
+                        <label><input type="radio" name="preference7" value="Arts"> Novels, poetry, or biographies of artists</label>
+                        <label><input type="radio" name="preference7" value="Commerce"> Self-help books about success or business</label>
+                    </div>
+                    <div class="question">
+                        <B><p>8. What is your favorite school activity?</p></B>
+                        <label><input type="radio" name="preference8" value="Science"> Science experiments or robotics</label>
+                        <label><input type="radio" name="preference8" value="Arts"> Acting in plays, painting, or music competitions</label>
+                        <label><input type="radio" name="preference8" value="Commerce"> Organizing school fairs or fundraisers</label>
+                    </div>
+                    <div class="question">
+                        <B><p>9. Which place would you choose to visit?</p></B>
+                        <label><input type="radio" name="preference9" value="Science"> A planetarium or science park</label>
+                        <label><input type="radio" name="preference9" value="Arts"> An art exhibition or theater</label>
+                        <label><input type="radio" name="preference9" value="Commerce"> A corporate office or stock exchange</label>
+                    </div>
+                    <div class="question">
+                        <B><p>10. What drives you to achieve something?</p></B>
+                        <label><input type="radio" name="preference10" value="Science"> Learning how things work and finding solutions</label>
+                        <label><input type="radio" name="preference10" value="Arts"> Creating something beautiful and meaningful</label>
+                        <label><input type="radio" name="preference10" value="Commerce"> Earning rewards and achieving financial success</label>
+                    </div>
+                    <div class="question">
+                        <B><p>11. If you could take a course in your free time, what would it be?</p></B>
+                        <label><input type="radio" name="preference11" value="Science"> Artificial intelligence or biotechnology</label>
+                        <label><input type="radio" name="preference11" value="Arts"> Graphic design or filmmaking</label>
+                        <label><input type="radio" name="preference11" value="Commerce"> Financial planning or marketing</label>
+                    </div>
+                    <div class="question">
+                        <B><p>12. Which event would you enjoy the most?</p></B>
+                        <label><input type="radio" name="preference12" value="Science"> A science exhibition or tech fair</label>
+                        <label><input type="radio" name="preference12" value="Arts"> An art festival or cultural event</label>
+                        <label><input type="radio" name="preference12" value="Commerce"> A business or investment seminar</label>
+                    </div>
+                    <div class="question">
+                        <B><p>13. Which of these activities do you find fulfilling?</p></B>
+                        <label><input type="radio" name="preference13" value="Science"> Conducting experiments or solving puzzles</label>
+                        <label><input type="radio" name="preference13" value="Arts"> Drawing, writing, or performing</label>
+                        <label><input type="radio" name="preference13" value="Commerce"> Selling a product or planning investments</label>
+                    </div>
+                    <div class="question">
+                        <B><p>14. How do you define success?</p></B>
+                        <label><input type="radio" name="preference14" value="Science"> By making significant discoveries or innovations</label>
+                        <label><input type="radio" name="preference14" value="Arts"> By creating something impactful and inspiring others</label>
+                        <label><input type="radio" name="preference14" value="Commerce"> By achieving financial stability and growing wealth</label>
+                    </div>
+                    <div class="question">
+                        <B><p>15. What kind of role suits your personality the best?</p></B>
+                        <label><input type="radio" name="preference15" value="Science"> A researcher or problem-solver</label>
+                        <label><input type="radio" name="preference15" value="Arts"> A creative leader or visionary</label>
+                        <label><input type="radio" name="preference15" value="Commerce"> A strategist or manager</label>
+                    </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Career Education. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    <script src="assests/javascript/quiz.js"></script>
+    <script src="assests/javascript/sidebar.js"></script>
+</body>
+</html>

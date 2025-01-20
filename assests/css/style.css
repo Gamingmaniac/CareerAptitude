@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Rockwell', serif;
+    line-height: 1.6;
+    background-color: #333;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+/* Header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 0;
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    height: 100px;
+    transition: top 0.3s ease-in-out;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* Allow header-left to take available space */
+}
+
+.header-left .logo {
+    margin: 0 15px;
+}
+
+.header-left .logo img {
+    width: 100px;
+    height: 100px;
+    max-height: 100px;
+}
+
+@media (max-width: 768px) {
+    header .logo img {
+        width: 80px;
+    }
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* Pushes the Sign Up button to the right */
+}
+
+.header-right input {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 150px;
+}
+
+.navbar {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Center the navigation items */
+    gap: 15px;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #333;
+}
+
+.header-right .login-btn {
+    background: #333;
+    /* Blue background for login button */
+    color: #fff;
+    /* White text */
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    /* Blue border */
+    border-radius: 4px;
+    margin-right: 10px;
+    /* Space between login and sign-up buttons */
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header-right .login-btn:hover {
+    background-color: #0056b3;
+    /* Darker blue on hover */
+}
+
+.header-right .signup-btn {
+    background: #28a745;
+    /* Green background for sign-up button */
+    color: #fff;
+    /* White text */
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.header-right .signup-btn:hover {
+    background-color: #218838;
+    /* Darker green on hover */
+}
+
+.hidden {
+    top: -100px;
+}
+
+/* Hero Section */
+.hero {
+    Margin-top: 70px;
+    background: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    display: flex; /* Use flexbox */
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 738px; /* Set a max width for the content */
+    width: 100%; /* Allow content to take full width */
+}
+
+.hero .hero-content {
+    position: relative;
+}
+
+.hero .hero-content h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero .hero-content h3 {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.hero .hero-content .hero-image {
+    margin: 20px 0;
+}
+
+.hero .hero-content p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    display: inline-block;
+    /* Make the button an inline-block element */
+    background: #e8491d;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 20px;
+    /* Padding for the button */
+    text-decoration: none;
+    /* Remove underline */
+    border-radius: 25px;
+    /* Curved edges */
+    text-align: center;
+    /* Center text */
+    transition: background-color 0.3s ease;
+    /* Transition for hover effect */
+    margin: 20px auto;
+    /* Center the button with auto margins */
+}
+
+.hero .btn:hover {
+    background-color: #fff;
+    /* Darker shade on hover */
+}
+
+.hero-image {
+    position: relative;
+    overflow: hidden; /* Hide overflow to prevent images from showing outside */
+    height: 400px;
+}
+
+.carousel-image {
+    position: absolute;
+    width: 100%; /* Make images responsive */
+    height: 100%; /* Make images fill the container */
+    object-fit: cover; /* Cover the container without distortion */
+    display: none;
+}
+
+.carousel-image:first-child {
+    display: block; /* Ensure the first image is visible */
+}
+
+.carousel-image:not(:first-child) {
+    opacity: 1;  /* Ensure the first image is visible */
+}
+
+/* Features Section */
+.features {
+    padding: 50px 0;
+    background: #fff;
+    color: #000;
+}
+
+.features .container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.features .feature-item {
+    margin: 20px;
+    text-align: center;
+}
+
+.features .icon {
+    font-size: 40px;
+    color: #333;
+}
+
+/* Courses Section */
+.courses {
+    padding: 50px 0;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+.courses .container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.courses .course-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+}
+
+.courses .course-item img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 0;
+    background: #fff;
+    text-align: center;
+}
+
+.testimonials .container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.testimonials .testimonial-item {
+    margin: 10px;
+}
+
+/* Blog Section */
+.blog {
+    padding: 50px 0;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+.blog .container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.blog .blog-item {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+}
+
+.blog .blog-item img {
+    display: block; /* Make the image a block element */
+    margin: 0 auto; /* Center the image */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.btn, .blog-item a {
+    color: #e8491d; /* Change this to your desired color */
+    text-decoration: underline;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.btn:hover, .blog-item a:hover {
+    color: #d7371d; /* Darker shade on hover */
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: 50px 0;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.newsletter .container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+.newsletter h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.newsletter form {
+    margin-top: 20px;
+}
+
+.newsletter input[type="email"] {
+    padding: 10px; /* Add padding */
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 25px; /* Curved edges */
+    width: 250px; /* Set width */
+    margin-right: 10px; /* Space between input and button */
+    font-size: 16px; /* Font size */
+    text-align: center;
+}
+
+.newsletter button {
+    background: #e8491d; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Curved edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s ease; /* Transition for hover effect */
+}
+
+.newsletter button:hover {
+    background-color: #d7371d; /* Darker shade on hover */
+}
+
+/* Footer */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .container {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap */
+}
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    margin-top: -70px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #121212;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1000;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #454d55;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    color: #f0f0f0;
+}
+
+.logout-btn {
+    margin-top: auto;
+    padding: 15px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logout-btn:hover {
+    background-color: red;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+}
+
+.hamburger:hover {
+    background-color: transparent;
+}

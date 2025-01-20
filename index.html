@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Aptitude - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rockwell:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assests/css/style.css">
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="testimonials.html">Reviews</a></li>
+        </ul>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+    <div class="backdrop" onclick="toggleSidebar()"></div>
+
+    <!-- Header and Navigation -->
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <button class="hamburger" onclick="toggleSidebar()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="assests/images/logo.png" alt="Career Aptitude">
+                    </a>
+                </div>
+                <h1 class="site-title">Career Aptitude</h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="faqs.html">FAQs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Explore Your Knowledge And Skill With Us</h1>
+            <div class="hero-image">
+                <img class="carousel-image" src="assests/images/hero1.png" alt="Hero Image 1">
+                <img class="carousel-image" src="assests/images/hero2.png" alt="Hero Image 2" style="display: none;">
+                <img class="carousel-image" src="assests/images/hero3.png" alt="Hero Image 3" style="display: none;">
+            </div>
+            <h3>Attempt our Quiz to know the perfect Career for you</h3>
+            <a href="start-quiz.html" class="btn">Get Started</a>
+        </div>
+    </div>
+</section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-item">
+                <i class="icon">👨‍🎓</i>
+                <h3>For Students</h3>
+            </div>
+            <div class="feature-item">
+                <i class="icon">📚</i>
+                <h3>Personalized Quizzes</h3>
+            </div>
+            <div class="feature-item">
+                <i class="icon">🎓</i>
+                <h3>Career Guidance</h3>
+            </div>
+            <div class="feature-item">
+                <i class="icon">🌟</i>
+                <h3>AI Based Recommendation</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses">
+        <div class="container">
+            <div class="course-item">
+                <h2>Explore Our Quiz</h2>
+                <img src="assests/images/quiz.png" alt="quiz">
+                <h3>Quiz</h3>
+                <p>Find your perfect career match with our quick quiz!</p>
+                <a href="start-quiz.html" class="btn">Learn More</a>
+            </div>
+            <!-- Repeat for more courses -->
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="testimonial-item">
+                <h2>What Our Students Say</h2>
+                <p>"This platform has greatly helped me find my dream career."</p>
+                <h4>- Vijay Chhapwale</h4>
+            </div>
+            <!-- Repeat for more testimonials -->
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog">
+        <div class="container">
+            <div class="blog-item">
+                <h2>Latest News & Blog</h2>
+                <img src="assests/images/blog1.png" alt="Blog 1">
+                <h3>Blog</h3>
+                <p>Get career tips and insights in our latest articles!</p>
+                <a href="blog.html">Read More</a>
+            </div>
+            <!-- Repeat for more blog posts -->
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <form>
+                <h2>Subscribe to Our Newsletter</h2>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Career Education. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastScrollTop = 0;
+            const header = document.querySelector('header');
+
+            window.addEventListener('scroll', function () {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.carousel-image');
+
+            function showNextImage() {
+                images[currentIndex].style.display = 'none'; // Hide current image
+                currentIndex = (currentIndex + 1) % images.length; // Move to the next image
+                images[currentIndex].style.display = 'block'; // Show next image
+            }
+
+            // Start the carousel
+            setInterval(showNextImage, 3000); // Change image every 3 seconds
+        });
+    </script>
+    <script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/01/19/09/20250119093855-Y06XOYNF.js"></script>
+    <script src="assests/javascript/carousel.js"></script>
+    <script src="assests/javascript/sidebar.js"></script>
+
+</body>
+
+</html>
